@@ -57,3 +57,19 @@ V17 Updates:
 - Fixed teeter-totter layering so it sits behind Cappy.
 - Removed remaining visible circles around sun/moon mode buttons.
 - Reduced day-mode LEVEL UP text shadow to remove the heavy layered look.
+
+
+V18 Updates:
+- Updated service worker cache name to v18 so browsers pull the newest CSS/JS.
+- Stronger fix for Cappy layering so teeter-totter sits behind mascot.
+- Removed sun/moon button circles using hard CSS reset.
+- Removed heavy day-mode LEVEL UP title shadow.
+
+
+V19 Updates:
+- Rebuilt homepage mascot/day-night scene from the current v18 source.
+- Added clean-scene class to mascot stage for targeted styling.
+- Sun and moon now render as artwork icons, not bordered buttons.
+- Teeter-totter is lower-opacity and behind Cappy.
+- Day-mode LEVEL UP headline shadow removed for a cleaner look.
+- Service worker cache updated to v19.
