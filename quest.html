@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quest | Level Up Trainings</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7e35ff" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="level-mark"><span></span><span></span><span></span></div>
+      <div>
+        <h1>LEVEL <b>UP</b></h1>
+        <p>TRAININGS</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">🏠 <span>Home</span></a>
+      <a href="about.html">💜 <span>About</span></a>
+      <a href="services.html">🧰 <span>Toolbox</span></a>
+      <a href="quest.html">🎮 <span>reQUEST</span></a>
+      <a href="accessibility.html">🔊 <span>Access</span></a>
+      <a href="contact.html">✉️ <span>Contact</span></a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero compact-page-hero">
+      <p class="mini">Training reQUEST</p>
+      <h2>Answer 5 quick questions.</h2>
+      <p>Earn XP, unlock rewards, and help us understand your training goals.</p>
+    </section>
+<section class="journey">
+      <p>Your Quest Journey</p>
+      <div class="journey-grid">
+        <div class="step active"><span>⚔️</span><b>1. Start</b><small>Basics</small></div>
+        <div class="step"><span>🔒</span><b>2. Needs</b><small>Training type</small></div>
+        <div class="step"><span>🔒</span><b>3. Details</b><small>Resources</small></div>
+        <div class="step"><span>🔒</span><b>4. Goals</b><small>Outcomes</small></div>
+        <div class="step"><span>🔒</span><b>5. Review</b><small>Submit</small></div>
+        <div class="step"><span>🎁</span><b>6. Rewards</b><small>Unlocks</small></div>
+      </div>
+    </section>
+
+    <section id="quest" class="quest">
+      <aside id="rewards" class="side-panel">
+        <section class="status-row side-status">
+          <div class="level-badge">
+            <span>LVL</span>
+            <strong id="levelNumber">1</strong>
+          </div>
+          <div class="xp-summary">
+            <div class="xp-top">
+              <strong id="discountLine">Bronze Reward</strong>
+              <span><b id="xpNumber">0</b> / 500 XP</span>
+            </div>
+            <div class="xp-meter"><div id="meterFill"></div></div>
+            <small id="nextReward">Next: Priority Scheduling</small>
+          </div>
+          <div id="xpBurst" class="xp-burst">+25 XP</div>
+        </section>
+
+        <div class="reaction-card">
+          <p class="mini">Quest Guide</p>
+          <strong id="sideReaction">Ready to start?</strong>
+          <span id="sideReactionSub">Earn XP as you complete each step.</span>
+        </div>
+
+        <h3>How XP Works</h3>
+        <p>XP is earned by completing intake details. More complete information means fewer clarification emails and a smoother project.</p>
+
+        <h3>Reward Levels</h3>
+        <p>🥉 Bronze: Custom project roadmap</p>
+        <p>🥈 Silver: Priority scheduling</p>
+        <p>🥇 Gold: One complimentary revision</p>
+        <p>💎 Platinum: VIP support + fast-track delivery</p>
+      </aside>
+
+      <form id="questForm" action="https://formspree.io/f/xlgywrpr" method="POST">
+        <input type="hidden" id="xpHidden" name="training_readiness_xp" value="0 / 500">
+        <input type="hidden" id="discountHidden" name="discount_unlocked" value="Bronze Reward">
+        <input type="hidden" id="summaryHidden" name="full_summary" value="">
+
+        <section class="quest-card">
+          <div class="quest-title"><span>1</span><div><p class="mini">Let’s Begin</p><h3>Project Foundation</h3></div></div>
+          <div class="grid">
+            <label>Email address<input data-xp="25" name="email" type="email" placeholder="you@example.com"></label>
+            <label>Your name<input data-xp="25" name="contact_name" type="text" placeholder="Your full name"></label>
+            <label>Organization<input data-xp="25" name="company_name" type="text" placeholder="Organization name"></label>
+            <label>Desired launch date<input data-xp="25" name="launch_date" type="date"></label>
+          </div>
+        </section>
+
+        <section class="quest-card">
+          <div class="quest-title"><span>2</span><div><p class="mini">Training Needs</p><h3>What do you need help with?</h3></div></div>
+          <div class="choices">
+            <label><input data-xp="40" type="checkbox" name="services" value="Training Enhancement"><b>Training Enhancement</b><small>Improve wording, clarity, and structure.</small></label>
+            <label><input data-xp="40" type="checkbox" name="services" value="Gamification"><b>Gamification</b><small>Add points, scenarios, badges, or activities.</small></label>
+            <label><input data-xp="40" type="checkbox" name="services" value="Aesthetic Redesign"><b>Aesthetic Redesign</b><small>Upgrade visuals, layout, and brand feel.</small></label>
+            <label><input data-xp="40" type="checkbox" name="services" value="Detail Enhancement / Content Rewrite"><b>Detail Enhancement</b><small>Add examples, detail, and learner-friendly flow.</small></label>
+            <label><input data-xp="60" type="checkbox" name="services" value="New Training Content"><b>New Training Content</b><small>Create training from scratch.</small></label>
+            <label><input data-xp="40" type="checkbox" name="services" value="SME Approved Revision"><b>SME-Approved Revision</b><small>Revise with expert review and approval.</small></label>
+            <label><input data-xp="50" type="checkbox" name="services" value="In-Person / Instructor-Led Training"><b>In-Person Training</b><small>Workshop or live training design.</small></label>
+          </div>
+        </section>
+
+        <section class="quest-card">
+          <div class="quest-title"><span>3</span><div><p class="mini">Project Details</p><h3>What existing resources can you share?</h3></div></div>
+          <p class="quest-helper">Select anything you already have that could help us understand, update, or build your training.</p>
+          <div class="choices compact">
+            <label><input data-xp="40" type="checkbox" name="materials" value="Existing PowerPoint or training deck">Existing PowerPoint or training deck</label>
+            <label><input data-xp="40" type="checkbox" name="materials" value="Training documents, SOPs, or work instructions">Training documents, SOPs, or work instructions</label>
+            <label><input data-xp="30" type="checkbox" name="materials" value="Existing e-learning, LMS content, or quizzes">Existing e-learning, LMS content, or quizzes</label>
+            <label><input data-xp="30" type="checkbox" name="materials" value="Photos, videos, screenshots, or examples">Photos, videos, screenshots, or examples</label>
+            <label><input data-xp="30" type="checkbox" name="materials" value="Branding, logos, colors, or style guidelines">Branding, logos, colors, or style guidelines</label>
+            <label><input data-xp="30" type="checkbox" name="materials" value="Reference websites, SharePoint links, or examples you like">Reference websites, SharePoint links, or examples you like</label>
+            <label><input data-xp="30" type="checkbox" name="materials" value="Learner feedback, pain points, or current issues">Learner feedback, pain points, or current issues</label>
+          </div>
+        </section>
+
+        <section class="quest-card">
+          <div class="quest-title"><span>4</span><div><p class="mini">Goals</p><h3>Audience & Approval</h3></div></div>
+          <label>Who is the training for?<textarea data-xp="40" name="audience" placeholder="Example: New hires, production operators, supervisors, HR team, safety committee..."></textarea></label>
+          <label>What should learners be able to do after training?<textarea data-xp="50" name="learning_goals" placeholder="Example: Follow a process correctly, pass a knowledge check, reduce errors..."></textarea></label>
+          <label>What subject matter expert will review or approve the training?<input data-xp="30" name="sme_contact" type="text" placeholder="Example: Safety Manager, HR Director, Operations Leader, or SME name/email"></label>
+          <label>Any compliance, safety, policy, or legal requirements?<textarea data-xp="40" name="requirements" placeholder="Example: OSHA, company safety policy, customer requirement, audit finding..."></textarea></label>
+        </section>
+
+        <section class="quest-card summary">
+          <div class="quest-title"><span>5</span><div><p class="mini">Review</p><h3>Submit Your Quest</h3></div></div>
+          <textarea id="summaryBox" readonly></textarea>
+          <div class="actions">
+            <button type="button" id="copyBtn">Copy Summary</button>
+            <button type="submit">Submit Quest</button>
+          </div>
+        </section>
+      </form>
+    </section>
+
+    
+    <footer>© 2026 Level Up Trainings. Made with 💜 for better training.</footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>
