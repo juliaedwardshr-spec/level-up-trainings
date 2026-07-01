@@ -73,3 +73,6 @@ V19 FINAL CLEAN:
 - Sun and moon no longer have button circles.
 - Day-mode LEVEL UP headline shadow removed.
 - Service worker cache updated to v19-final.
+
+V19 Final Steps Update:
+- Changed homepage intro from “Answer 5 quick questions” to “Complete 5 quick steps.”
