@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Level Up Trainings</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7e35ff" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="level-mark"><span></span><span></span><span></span></div>
+      <div>
+        <h1>LEVEL <b>UP</b></h1>
+        <p>TRAININGS</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">🏠 <span>Home</span></a>
+      <a href="about.html">💜 <span>About</span></a>
+      <a href="services.html">🧰 <span>Toolbox</span></a>
+      <a href="quest.html">🎮 <span>reQUEST</span></a>
+      <a href="accessibility.html">🔊 <span>Access</span></a>
+      <a href="contact.html">✉️ <span>Contact</span></a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <p class="mini">Services</p>
+      <h2>Choose your training upgrade.</h2>
+      <p>Whether you have an outdated PowerPoint, a new onboarding need, or a training that just is not sticking, Level Up Trainings can help you turn existing materials into a clearer, more engaging learning experience.</p>
+    </section>
+
+    <section class="service-grid">
+      <div class="service-card"><strong>🎮</strong><h3>Gamification</h3><p>Add XP, challenges, scenarios, badges, activities, and progress-based engagement.</p></div>
+      <div class="service-card"><strong>📚</strong><h3>Training Enhancement</h3><p>Rewrite and restructure existing materials so they are clearer, easier to follow, and more learner-friendly.</p></div>
+      <div class="service-card"><strong>🎨</strong><h3>Visual Redesign</h3><p>Refresh PowerPoints, guides, and training documents with stronger design and branding.</p></div>
+      <div class="service-card"><strong>👩‍🏫</strong><h3>Instructor-Led Training</h3><p>Build facilitator guides, activities, discussion prompts, and classroom-ready materials.</p></div>
+      <div class="service-card"><strong>🧩</strong><h3>New Training Content</h3><p>Create new training from SOPs, SME notes, policies, interviews, or existing documents.</p></div>
+      <div class="service-card"><strong>♿</strong><h3>Accessible Learning</h3><p>Improve readability, structure, plain-language flow, screen-reader support, and learner access.</p></div>
+    </section>
+
+    <section class="info-section">
+      <div class="section-copy">
+        <p class="mini">Not sure what you need?</p>
+        <h3>Start with the quest.</h3>
+        <p>The Level Up Training Quest helps identify your project needs and gives you a clearer path forward.</p>
+        <a class="pixel-button small-button" href="quest.html">Start Quest</a>
+      </div>
+      <div class="toolbox-card">
+        <h4>Best fit projects</h4>
+        <ul>
+          <li>Onboarding</li>
+          <li>Safety training</li>
+          <li>HR training</li>
+          <li>Quality or SOP training</li>
+          <li>Policy refreshers</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© 2026 Level Up Trainings. Made with 💜 for better training.</footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>

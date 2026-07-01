@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level Up Trainings</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7e35ff" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="level-mark"><span></span><span></span><span></span></div>
+      <div>
+        <h1>LEVEL <b>UP</b></h1>
+        <p>TRAININGS</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">🏠 <span>Home</span></a>
+      <a href="#aboutPopup" class="popup-trigger" data-popup="aboutPopup">💜 <span>About</span></a>
+      <a href="#toolboxPopup" class="popup-trigger" data-popup="toolboxPopup">🧰 <span>Toolbox</span></a>
+      <a href="quest.html">🎮 <span>reQUEST</span></a>
+      <a href="accessibility.html">🔊 <span>Access</span></a>
+      <a href="contact.html">✉️ <span>Contact</span></a>
+    </nav>
+  </header>
+
+  
+  <div id="aboutPopup" class="hover-popup" role="dialog" aria-label="About Level Up Trainings">
+    <button class="popup-close" type="button" aria-label="Close popup">×</button>
+    <p class="mini">About Level Up Trainings</p>
+    <h3>Training should feel clear, useful, and human.</h3>
+    <p>I help organizations redesign, modernize, and gamify existing training so learning feels more engaging, inclusive, and easier to remember.</p>
+    <a href="about.html">Read more →</a>
+  </div>
+
+  <div id="toolboxPopup" class="hover-popup" role="dialog" aria-label="Gamification Toolbox">
+    <button class="popup-close" type="button" aria-label="Close popup">×</button>
+    <p class="mini">Gamification Toolbox</p>
+    <h3>Build training that sticks.</h3>
+    <ul>
+      <li>XP systems and rewards</li>
+      <li>Scenario-based activities</li>
+      <li>PowerPoint and SOP redesign</li>
+      <li>Accessible learning support</li>
+    </ul>
+    <a href="services.html">Explore services →</a>
+  </div>
+
+
+  <main>
+<section class="hero">
+      <div class="hero-copy">
+        <p class="mini request-title">Training <span>reQUEST</span></p>
+        <h2>LEVEL <span>UP</span><br><em>YOUR TRAINING</em></h2>
+        <p class="intro">Answer 5 quick questions, earn XP, and discover a custom training solution built around your team.</p>
+        <a class="pixel-button" href="quest.html">START TRAINING reQUEST <span>›</span></a>
+        <button type="button" id="installAppBtn" class="install-app-btn">⬇ INSTALL APP</button>
+      </div>
+
+      <div class="mascot-stage">
+        <div class="sky"></div>
+        <div class="mascot-glow"></div>
+        <div class="scene-toggle-card" aria-label="Day and night mode toggle">
+          <p class="scene-title">Choose your mode</p>
+          <div class="celestial-toggle">
+            <button type="button" id="moonModeBtn" class="celestial moon" aria-label="Switch to night mode">🌙</button>
+            <div class="seesaw">
+              <span class="seesaw-board"></span>
+              <span class="seesaw-base"></span>
+            </div>
+            <button type="button" id="sunModeBtn" class="celestial sun" aria-label="Switch to light mode">☀️</button>
+          </div>
+          <p class="mode-hint">Tap the sun or moon to switch modes.</p>
+        </div>
+        <img id="mascot" src="mascot.png" alt="Pixel capybara quest guide with chick">
+        <div class="platform"></div>
+        <div class="speech">
+          <strong id="coachMessage">Hi! I’m your quest guide.</strong>
+          <p id="coachSubtext">Let’s level up together! ✨</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="feature-row">
+      <div><strong>XP</strong><h3>Earn XP</h3><p>Complete steps.</p></div>
+      <div><strong>★</strong><h3>Unlock Perks</h3><p>Earn rewards.</p></div>
+      <div><strong>▲</strong><h3>Level Up</h3><p>Improve training.</p></div>
+    </section>
+
+
+    
+    <section class="home-preview info-section">
+      <div class="section-copy">
+        <p class="mini">What We Do</p>
+        <h3>We turn training into something people remember.</h3>
+        <p>Level Up Trainings helps organizations refresh, redesign, and gamify existing learning materials so they are easier to understand, more engaging, and built for real teams.</p>
+        <a class="pixel-button small-button" href="quest.html">Start Your Training Quest</a>
+      </div>
+      <div class="toolbox-card">
+        <h4>Popular Services</h4>
+        <ul>
+          <li>Training enhancement and rewrite</li>
+          <li>Gamification and learner engagement</li>
+          <li>Visual redesign and brand refresh</li>
+          <li>Instructor-led and onboarding support</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© 2026 Level Up Trainings. Made with 💜 for better training.</footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>

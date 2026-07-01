@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Level Up Trainings</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7e35ff" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="level-mark"><span></span><span></span><span></span></div>
+      <div>
+        <h1>LEVEL <b>UP</b></h1>
+        <p>TRAININGS</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">🏠 <span>Home</span></a>
+      <a href="about.html">💜 <span>About</span></a>
+      <a href="services.html">🧰 <span>Toolbox</span></a>
+      <a href="quest.html">🎮 <span>reQUEST</span></a>
+      <a href="accessibility.html">🔊 <span>Access</span></a>
+      <a href="contact.html">✉️ <span>Contact</span></a>
+    </nav>
+  </header>
+
+  <main>
+<section id="about" class="info-section about-section">
+      <div class="section-copy">
+        <p class="mini">About Level Up Trainings</p>
+        <h3>Training should feel clear, useful, and human.</h3>
+        <p>
+          Level Up Trainings was built from a passion for creating learning experiences that help people feel included, confident, and prepared. My work blends training design, belonging, process improvement, and a little gamification to make learning easier to remember and easier to use.
+        </p>
+        <p>
+          I believe training should do more than check a box. It should help people understand what matters, why it matters, and how to apply it in real life. My passion lies in making training stick — especially for teams who are learning new processes, entering new roles, or navigating important safety, HR, quality, onboarding, or compliance topics.
+        </p>
+      </div>
+      <div class="toolbox-card">
+        <h4>Gamification Toolbox</h4>
+        <p>Level Up Trainings uses tools like XP, quests, badges, scenarios, visual redesign, reflection prompts, and learner-friendly language to make training more engaging and accessible.</p>
+        <ul>
+          <li>🎮 XP-based intake and engagement</li>
+          <li>⭐ Scenario and activity design</li>
+          <li>📚 Clearer content structure</li>
+          <li>💜 Belonging-centered learning</li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <section class="info-section">
+      <div class="section-copy">
+        <p class="mini">Our Philosophy</p>
+        <h3>Belonging makes learning stronger.</h3>
+        <p>Great training should help people feel like they have a place in the process. Whether someone is new, nervous, experienced, visual, hands-on, or detail-oriented, training should meet them where they are.</p>
+        <p>Level Up Trainings is built around clarity, belonging, accessibility, and practical application. The goal is not just prettier slides. The goal is learning that sticks.</p>
+      </div>
+      <div class="toolbox-card">
+        <h4>What guides the work</h4>
+        <ul>
+          <li>Make training easier to understand</li>
+          <li>Make training easier to remember</li>
+          <li>Design for different learning styles</li>
+          <li>Build confidence, not confusion</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© 2026 Level Up Trainings. Made with 💜 for better training.</footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>

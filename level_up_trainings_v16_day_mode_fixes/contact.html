@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Level Up Trainings</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#7e35ff" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="confetti"></div>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="level-mark"><span></span><span></span><span></span></div>
+      <div>
+        <h1>LEVEL <b>UP</b></h1>
+        <p>TRAININGS</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">🏠 <span>Home</span></a>
+      <a href="about.html">💜 <span>About</span></a>
+      <a href="services.html">🧰 <span>Toolbox</span></a>
+      <a href="quest.html">🎮 <span>reQUEST</span></a>
+      <a href="accessibility.html">🔊 <span>Access</span></a>
+      <a href="contact.html">✉️ <span>Contact</span></a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero compact-page-hero">
+      <p class="mini">Contact</p>
+      <h2>Ready to level up your training?</h2>
+      <p>Reach out with questions, documents, accessibility needs, links, or reference materials you want to share.</p>
+    </section>
+<section id="contact" class="contact">
+      <div>
+        <p class="mini">Have a Question?</p>
+        <h3>We’re here to help.</h3>
+        <p>Email <a href="mailto:juliaedwards.hr@gmail.com">juliaedwards.hr@gmail.com</a> for questions, documents, accessibility needs, links, or reference materials you want to share.</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>Julia Edwards</strong></p>
+        <p>Founder, Level Up Trainings</p>
+        <p>📧 juliaedwards.hr@gmail.com</p>
+      </div>
+    </section>
+
+    
+    <section class="info-section">
+      <div class="section-copy">
+        <p class="mini">Next Step</p>
+        <h3>Start with a quick training quest.</h3>
+        <p>If you are not sure what you need yet, the quest will help organize your goals and materials before we connect.</p>
+        <a class="pixel-button small-button" href="quest.html">Start Quest</a>
+      </div>
+      <div class="toolbox-card">
+        <h4>Email</h4>
+        <p><a href="mailto:juliaedwards.hr@gmail.com">juliaedwards.hr@gmail.com</a></p>
+      </div>
+    </section>
+
+    <footer>© 2026 Level Up Trainings. Made with 💜 for better training.</footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>
