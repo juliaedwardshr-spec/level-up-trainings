@@ -1849,3 +1849,817 @@ body.light-mode .platform {
     transform: translateY(-30px) scale(.9);
   }
 }
+
+
+/* V15: cleaner day mode + more natural mascot scene */
+body.light-mode .hero h2 {
+  text-shadow: 0 3px 0 rgba(12, 21, 52, .22);
+}
+
+body.light-mode .hero h2 em {
+  text-shadow: 0 3px 0 rgba(239, 139, 19, .25);
+}
+
+body.light-mode .brand h1,
+body.light-mode .page-hero h2 {
+  text-shadow: none;
+}
+
+.mascot-stage {
+  isolation: isolate;
+}
+
+.mascot-stage .mascot-glow {
+  z-index: 1;
+}
+
+.mascot-stage .platform {
+  z-index: 2;
+}
+
+.mascot-stage #mascot {
+  z-index: 4;
+}
+
+/* Put the mode selector behind/around the mascot instead of over the body */
+.scene-toggle-card {
+  position: absolute;
+  z-index: 3;
+  right: 18px;
+  bottom: 14px;
+  width: 270px;
+  min-height: 118px;
+  padding: 10px 14px 8px;
+  border-radius: 18px;
+  border: 2px solid rgba(179,134,255,.42);
+  background:
+    radial-gradient(circle at 78% 22%, rgba(255,216,75,.12), transparent 42%),
+    rgba(7, 16, 45, .48);
+  box-shadow:
+    inset 0 0 24px rgba(126,53,255,.12),
+    0 0 18px rgba(126,53,255,.18);
+  backdrop-filter: blur(2px);
+}
+
+.scene-title {
+  margin: 0 0 2px;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.scene-toggle-card .celestial-toggle {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  width: 100%;
+  height: 70px;
+  transform: none;
+  pointer-events: none;
+}
+
+.scene-toggle-card .celestial {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 8px rgba(255,216,75,.55));
+  font-size: 34px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  transition: transform .65s cubic-bezier(.2,.9,.2,1), opacity .25s ease, filter .25s ease;
+}
+
+.scene-toggle-card .celestial.moon {
+  left: 18px;
+  bottom: 16px;
+  position: absolute;
+  filter: drop-shadow(0 0 8px rgba(179,134,255,.65));
+}
+
+.scene-toggle-card .celestial.sun {
+  right: 18px;
+  top: 8px;
+  position: absolute;
+  filter: drop-shadow(0 0 10px rgba(255,216,75,.85));
+}
+
+.scene-toggle-card .seesaw {
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  bottom: 25px;
+  height: 48px;
+  transform: rotate(-10deg);
+  transform-origin: center;
+  transition: transform .65s cubic-bezier(.2,.9,.2,1);
+}
+
+.scene-toggle-card .seesaw-board {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 21px;
+  height: 9px;
+  border: 2px solid rgba(33,16,92,.8);
+  background: linear-gradient(90deg, #6a22d8, #b386ff, #6a22d8);
+  box-shadow: 0 0 14px rgba(126,53,255,.32);
+}
+
+.scene-toggle-card .seesaw-base {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 38px;
+  height: 30px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--purple2), var(--purple));
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 0 8px rgba(126,53,255,.35));
+}
+
+.scene-toggle-card .mode-hint {
+  position: static;
+  transform: none;
+  width: auto;
+  margin: 0;
+  font-size: 10px;
+  opacity: .78;
+  text-align: center;
+  color: var(--muted);
+}
+
+body.light-mode .scene-toggle-card {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255,216,75,.20), transparent 44%),
+    rgba(255, 255, 255, .54);
+  border-color: rgba(126,53,255,.28);
+  box-shadow:
+    inset 0 0 22px rgba(126,53,255,.08),
+    0 0 16px rgba(126,53,255,.10);
+}
+
+body.light-mode .scene-toggle-card .seesaw {
+  transform: rotate(10deg);
+}
+
+body.light-mode .scene-toggle-card .celestial.sun {
+  transform: translateY(37px) scale(1.08);
+  opacity: 1;
+}
+
+body.light-mode .scene-toggle-card .celestial.moon {
+  transform: translateY(-37px) scale(.92);
+  opacity: .58;
+}
+
+body:not(.light-mode) .scene-toggle-card .celestial.moon {
+  transform: translateY(0) scale(1.08);
+  opacity: 1;
+}
+
+body:not(.light-mode) .scene-toggle-card .celestial.sun {
+  transform: translateY(0) scale(.92);
+  opacity: .72;
+}
+
+/* Lift mascot/platform slightly so toggle has breathing room */
+@media (min-width: 851px) {
+  .mascot-stage #mascot {
+    width: min(285px, 70%);
+    transform-origin: center bottom;
+  }
+
+  .mascot-stage .platform {
+    width: 315px;
+    bottom: 42px;
+  }
+}
+
+@media (max-width: 850px) {
+  .scene-toggle-card {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 6px;
+    width: min(255px, calc(100% - 18px));
+    min-height: 88px;
+    padding: 7px 10px 5px;
+  }
+
+  .scene-title {
+    font-size: 10px;
+  }
+
+  .scene-toggle-card .celestial-toggle {
+    height: 54px;
+  }
+
+  .scene-toggle-card .celestial {
+    font-size: 25px;
+  }
+
+  .scene-toggle-card .celestial.moon {
+    left: 24px;
+    bottom: 10px;
+  }
+
+  .scene-toggle-card .celestial.sun {
+    right: 24px;
+    top: 4px;
+  }
+
+  .scene-toggle-card .seesaw {
+    left: 58px;
+    right: 58px;
+    bottom: 18px;
+  }
+
+  .scene-toggle-card .mode-hint {
+    display: none;
+  }
+
+  body.light-mode .scene-toggle-card .celestial.sun {
+    transform: translateY(27px) scale(1.08);
+  }
+
+  body.light-mode .scene-toggle-card .celestial.moon {
+    transform: translateY(-27px) scale(.9);
+  }
+}
+
+
+/* V16 FINAL: Cappy scene cleanup + day mode text cleanup */
+
+/* Day mode: remove the heavy stacked/double-shadow effect from the hero headline */
+body.light-mode .hero h2,
+body.light-mode .hero h2 span,
+body.light-mode .hero h2 em {
+  text-shadow: 0 2px 0 rgba(12, 21, 52, .14) !important;
+}
+
+body.light-mode .hero h2 {
+  filter: none !important;
+}
+
+body.light-mode .hero h2 em {
+  color: #ef8b13 !important;
+}
+
+body.light-mode .brand h1,
+body.light-mode .brand h1 b,
+body.light-mode .page-hero h2 {
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+/* Make the mascot scene feel intentional */
+.mascot-stage {
+  isolation: isolate !important;
+  overflow: hidden !important;
+}
+
+/* Background sky */
+.mascot-stage .sky {
+  z-index: 0 !important;
+}
+
+/* Soft glow behind Cappy */
+.mascot-stage .mascot-glow {
+  z-index: 1 !important;
+}
+
+/* Put the mode control BEHIND Cappy, not over his face/body */
+.scene-toggle-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 48px !important;
+  transform: translateX(-50%) !important;
+  z-index: 2 !important;
+
+  width: min(500px, 92%) !important;
+  min-height: 118px !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  pointer-events: none !important;
+}
+
+/* Hide the little card title so the scene is cleaner */
+.scene-title {
+  display: none !important;
+}
+
+/* Keep the tappable sun/moon, but make them look like illustrated scene objects */
+.scene-toggle-card .celestial-toggle {
+  position: relative !important;
+  width: 100% !important;
+  height: 120px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  pointer-events: none !important;
+}
+
+/* REMOVE circles, borders, button styling around sun/moon */
+.scene-toggle-card .celestial,
+.celestial,
+button.celestial {
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+
+  font-size: 38px !important;
+  line-height: 1 !important;
+  display: grid !important;
+  place-items: center !important;
+
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  transition: transform .65s cubic-bezier(.2,.9,.2,1), opacity .25s ease, filter .25s ease !important;
+}
+
+.scene-toggle-card .celestial.moon {
+  position: absolute !important;
+  left: 16px !important;
+  bottom: 34px !important;
+  filter: drop-shadow(0 0 8px rgba(126,53,255,.42)) !important;
+}
+
+.scene-toggle-card .celestial.sun {
+  position: absolute !important;
+  right: 16px !important;
+  top: 16px !important;
+  filter: drop-shadow(0 0 10px rgba(255,216,75,.72)) !important;
+}
+
+/* Wooden teeter-totter style, behind Cappy */
+.scene-toggle-card .seesaw {
+  position: absolute !important;
+  left: 64px !important;
+  right: 64px !important;
+  bottom: 46px !important;
+  height: 54px !important;
+  transform: rotate(-8deg) !important;
+  transform-origin: center !important;
+  transition: transform .65s cubic-bezier(.2,.9,.2,1) !important;
+  z-index: 1 !important;
+}
+
+.scene-toggle-card .seesaw-board {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 24px !important;
+  height: 12px !important;
+  border: 3px solid #2b170d !important;
+  border-radius: 3px !important;
+  background: linear-gradient(180deg, #9a5a30 0%, #7a3d21 55%, #4b2414 100%) !important;
+  box-shadow: 0 7px 0 rgba(0,0,0,.20) !important;
+}
+
+.scene-toggle-card .seesaw-base {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 0 !important;
+  width: 46px !important;
+  height: 36px !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(180deg, #a46b37, #5e321b) !important;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%) !important;
+  filter: drop-shadow(0 4px 0 rgba(0,0,0,.20)) !important;
+}
+
+/* Hint below the scene, not on top of Cappy */
+.scene-toggle-card .mode-hint,
+.mode-hint {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -16px !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+  font-size: 10px !important;
+  opacity: .70 !important;
+  color: var(--muted) !important;
+}
+
+/* Cappy and platform are in front of the teeter-totter */
+.mascot-stage #mascot {
+  position: relative !important;
+  z-index: 4 !important;
+  width: min(300px, 74%) !important;
+  transform-origin: center bottom !important;
+}
+
+.mascot-stage .platform {
+  z-index: 3 !important;
+  width: 340px !important;
+  bottom: 38px !important;
+}
+
+/* Speech bubble stays front */
+.mascot-stage .speech {
+  z-index: 6 !important;
+}
+
+/* Day mode specific positions: sun lower, moon higher, board tips the other way */
+body.light-mode .scene-toggle-card .seesaw {
+  transform: rotate(8deg) !important;
+}
+
+body.light-mode .scene-toggle-card .celestial.sun {
+  transform: translateY(46px) scale(1.04) !important;
+  opacity: 1 !important;
+}
+
+body.light-mode .scene-toggle-card .celestial.moon {
+  transform: translateY(-46px) scale(.92) !important;
+  opacity: .62 !important;
+}
+
+/* Night mode positions */
+body:not(.light-mode) .scene-toggle-card .celestial.moon {
+  transform: translateY(0) scale(1.06) !important;
+  opacity: 1 !important;
+}
+
+body:not(.light-mode) .scene-toggle-card .celestial.sun {
+  transform: translateY(0) scale(.92) !important;
+  opacity: .72 !important;
+}
+
+/* Keep sun/moon out from under Cappy as much as possible */
+@media (min-width: 851px) {
+  .hero {
+    grid-template-columns: .95fr 1.05fr !important;
+  }
+
+  .mascot-stage {
+    min-height: 420px !important;
+  }
+
+  .scene-toggle-card {
+    width: min(560px, 96%) !important;
+    bottom: 54px !important;
+  }
+
+  .scene-toggle-card .celestial.moon {
+    left: 28px !important;
+  }
+
+  .scene-toggle-card .celestial.sun {
+    right: 28px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .scene-toggle-card {
+    width: min(310px, 94%) !important;
+    bottom: 38px !important;
+  }
+
+  .scene-toggle-card .celestial-toggle {
+    height: 90px !important;
+  }
+
+  .scene-toggle-card .celestial,
+  .celestial,
+  button.celestial {
+    font-size: 27px !important;
+  }
+
+  .scene-toggle-card .celestial.moon {
+    left: 8px !important;
+    bottom: 28px !important;
+  }
+
+  .scene-toggle-card .celestial.sun {
+    right: 8px !important;
+    top: 14px !important;
+  }
+
+  .scene-toggle-card .seesaw {
+    left: 44px !important;
+    right: 44px !important;
+    bottom: 36px !important;
+  }
+
+  body.light-mode .scene-toggle-card .celestial.sun {
+    transform: translateY(34px) scale(1.04) !important;
+  }
+
+  body.light-mode .scene-toggle-card .celestial.moon {
+    transform: translateY(-34px) scale(.92) !important;
+  }
+
+  .mascot-stage #mascot {
+    width: min(230px, 72%) !important;
+  }
+
+  .mascot-stage .platform {
+    width: 255px !important;
+    bottom: 32px !important;
+  }
+
+  body.light-mode .hero h2,
+  body.light-mode .hero h2 span,
+  body.light-mode .hero h2 em {
+    text-shadow: 0 1px 0 rgba(12, 21, 52, .12) !important;
+  }
+}
+
+
+/* V17: final clean scene fixes */
+
+/* Clean day-mode headline: remove stacked/doubled shadow */
+body.light-mode .hero h2,
+body.light-mode .hero h2 span,
+body.light-mode .hero h2 em,
+body.light-mode .hero-copy h2,
+body.light-mode .hero-copy h2 span,
+body.light-mode .hero-copy h2 em {
+  text-shadow: 0 2px 0 rgba(6, 11, 34, .12) !important;
+  filter: none !important;
+}
+
+body.light-mode .hero h2 em,
+body.light-mode .hero-copy h2 em {
+  color: #ef8b13 !important;
+}
+
+/* Make the mascot scene layer correctly */
+.mascot-stage {
+  isolation: isolate !important;
+  overflow: hidden !important;
+}
+
+.mascot-stage .sky {
+  z-index: 0 !important;
+}
+
+.mascot-stage .mascot-glow {
+  z-index: 1 !important;
+}
+
+/* The entire toggle layer goes behind Cappy */
+.scene-toggle-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 74px !important;
+  transform: translateX(-50%) !important;
+  z-index: 2 !important;
+  width: min(600px, 96%) !important;
+  min-height: 130px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  pointer-events: none !important;
+}
+
+.scene-title {
+  display: none !important;
+}
+
+.scene-toggle-card .celestial-toggle {
+  position: relative !important;
+  width: 100% !important;
+  height: 130px !important;
+  pointer-events: none !important;
+}
+
+/* Remove all visible button circles around moon and sun */
+.scene-toggle-card .celestial,
+.celestial,
+button.celestial,
+body.light-mode .scene-toggle-card .celestial,
+body.light-mode .celestial,
+body.light-mode button.celestial {
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-size: 40px !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Position sun/moon farther away from Cappy's face and body */
+.scene-toggle-card .celestial.moon {
+  position: absolute !important;
+  left: 14px !important;
+  bottom: 38px !important;
+  filter: drop-shadow(0 0 8px rgba(126,53,255,.35)) !important;
+}
+
+.scene-toggle-card .celestial.sun {
+  position: absolute !important;
+  right: 14px !important;
+  top: 18px !important;
+  filter: drop-shadow(0 0 10px rgba(255,216,75,.72)) !important;
+}
+
+/* Teeter-totter becomes a background prop behind the capybara */
+.scene-toggle-card .seesaw {
+  position: absolute !important;
+  left: 70px !important;
+  right: 70px !important;
+  bottom: 52px !important;
+  height: 54px !important;
+  z-index: 1 !important;
+  transform: rotate(-7deg) !important;
+  transform-origin: center !important;
+  transition: transform .65s cubic-bezier(.2,.9,.2,1) !important;
+  opacity: .88 !important;
+}
+
+.scene-toggle-card .seesaw-board {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 25px !important;
+  height: 10px !important;
+  border: 3px solid #2b170d !important;
+  border-radius: 4px !important;
+  background: linear-gradient(180deg, #a86735 0%, #81451f 54%, #4b2414 100%) !important;
+  box-shadow: 0 6px 0 rgba(0,0,0,.18) !important;
+}
+
+.scene-toggle-card .seesaw-base {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 0 !important;
+  width: 44px !important;
+  height: 34px !important;
+  transform: translateX(-50%) !important;
+  background: linear-gradient(180deg, #a46b37, #5e321b) !important;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%) !important;
+  filter: drop-shadow(0 4px 0 rgba(0,0,0,.18)) !important;
+}
+
+.scene-toggle-card .mode-hint,
+.mode-hint {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -22px !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 10px !important;
+  opacity: .68 !important;
+  color: var(--muted) !important;
+  pointer-events: none !important;
+}
+
+/* Cappy and platform sit in front of teeter-totter */
+.mascot-stage #mascot {
+  position: relative !important;
+  z-index: 5 !important;
+  width: min(300px, 74%) !important;
+  transform-origin: center bottom !important;
+}
+
+.mascot-stage .platform {
+  z-index: 4 !important;
+  width: 340px !important;
+  bottom: 38px !important;
+}
+
+/* Speech bubble in front */
+.mascot-stage .speech {
+  z-index: 8 !important;
+}
+
+/* Day mode: seesaw tips to sun and icons shift cleanly */
+body.light-mode .scene-toggle-card .seesaw {
+  transform: rotate(7deg) !important;
+}
+
+body.light-mode .scene-toggle-card .celestial.sun {
+  transform: translateY(48px) scale(1.04) !important;
+  opacity: 1 !important;
+}
+
+body.light-mode .scene-toggle-card .celestial.moon {
+  transform: translateY(-48px) scale(.9) !important;
+  opacity: .58 !important;
+}
+
+/* Night mode: moon emphasis */
+body:not(.light-mode) .scene-toggle-card .celestial.moon {
+  transform: translateY(0) scale(1.04) !important;
+  opacity: 1 !important;
+}
+
+body:not(.light-mode) .scene-toggle-card .celestial.sun {
+  transform: translateY(0) scale(.9) !important;
+  opacity: .70 !important;
+}
+
+@media (min-width: 851px) {
+  .mascot-stage {
+    min-height: 430px !important;
+  }
+
+  .scene-toggle-card {
+    bottom: 78px !important;
+  }
+
+  .scene-toggle-card .celestial.moon {
+    left: 30px !important;
+  }
+
+  .scene-toggle-card .celestial.sun {
+    right: 30px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  body.light-mode .hero h2,
+  body.light-mode .hero h2 span,
+  body.light-mode .hero h2 em,
+  body.light-mode .hero-copy h2,
+  body.light-mode .hero-copy h2 span,
+  body.light-mode .hero-copy h2 em {
+    text-shadow: 0 1px 0 rgba(6, 11, 34, .10) !important;
+  }
+
+  .scene-toggle-card {
+    width: min(330px, 96%) !important;
+    bottom: 58px !important;
+    min-height: 94px !important;
+  }
+
+  .scene-toggle-card .celestial-toggle {
+    height: 94px !important;
+  }
+
+  .scene-toggle-card .celestial,
+  .celestial,
+  button.celestial {
+    font-size: 28px !important;
+  }
+
+  .scene-toggle-card .celestial.moon {
+    left: 10px !important;
+    bottom: 30px !important;
+  }
+
+  .scene-toggle-card .celestial.sun {
+    right: 10px !important;
+    top: 14px !important;
+  }
+
+  .scene-toggle-card .seesaw {
+    left: 48px !important;
+    right: 48px !important;
+    bottom: 38px !important;
+  }
+
+  body.light-mode .scene-toggle-card .celestial.sun {
+    transform: translateY(34px) scale(1.04) !important;
+  }
+
+  body.light-mode .scene-toggle-card .celestial.moon {
+    transform: translateY(-34px) scale(.9) !important;
+  }
+
+  .mascot-stage #mascot {
+    width: min(230px, 72%) !important;
+  }
+
+  .mascot-stage .platform {
+    width: 255px !important;
+    bottom: 32px !important;
+  }
+}

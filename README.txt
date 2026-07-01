@@ -36,3 +36,24 @@ V14 Updates:
 - Reworked day/night toggle into a polished overlay card instead of a rough layered teeter-totter.
 - Sun/moon controls are now integrated into the mascot scene.
 - Improved spacing, sizing, glow, and mobile layout.
+
+
+V15 Updates:
+- Reduced heavy dark shadow on the LEVEL UP hero text in day mode.
+- Removed visible circles/borders around sun and moon controls.
+- Reworked sun/moon selector as a softer integrated overlay.
+- Adjusted scene layering so Cappy covers the toggle less.
+
+
+V16 Updates:
+- Use existing GitHub repository; do not create a new repo.
+- Teeter-totter moved behind Cappy instead of covering the mascot.
+- Removed visible circles/borders around the sun and moon buttons.
+- Cleaned up day-mode headline layering/shadow.
+- Adjusted mascot scene spacing so it feels more intentional.
+
+
+V17 Updates:
+- Fixed teeter-totter layering so it sits behind Cappy.
+- Removed remaining visible circles around sun/moon mode buttons.
+- Reduced day-mode LEVEL UP text shadow to remove the heavy layered look.
