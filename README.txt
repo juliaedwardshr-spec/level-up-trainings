@@ -66,10 +66,10 @@ V18 Updates:
 - Removed heavy day-mode LEVEL UP title shadow.
 
 
-V19 Updates:
-- Rebuilt homepage mascot/day-night scene from the current v18 source.
-- Added clean-scene class to mascot stage for targeted styling.
-- Sun and moon now render as artwork icons, not bordered buttons.
-- Teeter-totter is lower-opacity and behind Cappy.
-- Day-mode LEVEL UP headline shadow removed for a cleaner look.
-- Service worker cache updated to v19.
+V19 FINAL CLEAN:
+- Removed old stacked V13-V18 scene CSS from styles.css.
+- Replaced it with one clean hero/day-night scene system.
+- Teeter-totter sits behind Cappy.
+- Sun and moon no longer have button circles.
+- Day-mode LEVEL UP headline shadow removed.
+- Service worker cache updated to v19-final.

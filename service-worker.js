@@ -1,4 +1,4 @@
-const CACHE_NAME = "level-up-trainings-v19";
+const CACHE_NAME = "level-up-trainings-v19-final";
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
